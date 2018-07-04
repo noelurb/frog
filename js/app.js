@@ -67,9 +67,10 @@ const showAllTasks = function showAllTasks(parent, taskArray) {
 
 const showNoTasks = function showNoTasks() {
   let noTask = document.createElement('div');
-  noTask.className = "col-10 col-md-7 my-4 border";
+  noTask.className = "col-10 col-md-7 my-4 d-flex flex-column justify-content-around align-items-center";
   noTask.innerHTML = `
-    <h2>No hay tareas pendientes :D</h2>
+    <h2 class="p-4">No tasks yet</h2>
+    <a class="btn btn-success text-center" href="#" data-toggle="modal" data-target="#exampleModal">New Task</a>
   `
   cardWrapper.appendChild(noTask);
 }
